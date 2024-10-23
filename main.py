@@ -4,7 +4,8 @@ from encoder import encode
 from decoder import decode
 
 if __name__ == '__main__':
-    password = ''
+    password1 = ''
+    password2= ''
     while True:
         print('\nMenu')
         print('-------------')
@@ -15,10 +16,11 @@ if __name__ == '__main__':
         menu_option = input('Please enter an option: ')
 
         if menu_option == '1':
-            password = input('Please enter your password to encode: ')
+            password1 = input('Please enter your password to encode: ')
             print('Your password has been encoded and stored!')
         elif menu_option == '2':
-            print(f'The encoded password is {encode(password)}, and the original password is {decode(password)}.')
+            password2 = encode(password1)
+            print(f'The encoded password is {encode(password1)}, and the original password is {decode(password2)}.')
         elif menu_option == '3':
             break
 
